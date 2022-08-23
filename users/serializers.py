@@ -1,5 +1,5 @@
 from rest_framework.serializers import HyperlinkedModelSerializer, ModelSerializer
-from users.models import User, Account_Balance
+from users.models import User, AccountBalance
 
 
 class UserModelSerializers(HyperlinkedModelSerializer):
@@ -9,5 +9,5 @@ class UserModelSerializers(HyperlinkedModelSerializer):
 
 class BalanceModelSerializer(ModelSerializer):
     class Meta:
-        model = Account_Balance
-        fields = ('balance',)
+        model = AccountBalance
+        fields = ('user_id', 'balance')

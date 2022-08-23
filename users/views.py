@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
-from users.models import User, Account_Balance
+from users.models import User, AccountBalance
 from users.serializers import UserModelSerializers, BalanceModelSerializer
 
 class UserModelViewSet(ModelViewSet):
@@ -8,5 +8,5 @@ class UserModelViewSet(ModelViewSet):
     serializer_class = UserModelSerializers
 
 class BalanceModelViewSet(ModelViewSet):
-    queryset = Account_Balance.objects.all()
+    queryset = AccountBalance.objects.all()
     serializer_class = BalanceModelSerializer
