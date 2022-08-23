@@ -17,11 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from users.views import UserModelViewSet, BalanceModelViewSet
-
+from product.views import ProductModelViewSet
 
 router = DefaultRouter()
 router.register('users', UserModelViewSet)
 router.register('balance', BalanceModelViewSet)
+router.register('products', ProductModelViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
