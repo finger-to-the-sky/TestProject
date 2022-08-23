@@ -8,3 +8,10 @@ class User(AbstractUser):
 
     def __str__(self):
         return f'Пользователь {self.username}'
+
+class Account_Balance(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    balance = models.IntegerField()
+
+    def __str__(self):
+        return f'Баланс: {self.balance}'
